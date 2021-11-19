@@ -1,0 +1,232 @@
+:root {
+    /* color */
+    --black-color: #140a00;
+    --white-color: #fff;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --dark-grey-color: #909090;
+    --light-grey-color: #e0e0e0;
+
+    /* size */
+    --avatar-size: 36px;
+    --padding-xs: 10px;
+    --padding-s: 12px;
+    --padding-m: 14px;
+    --header-padding: 3px;
+
+    /* font-size */
+    --font-xs: 10px;
+    --font-s: 12px;
+    --font-m: 14px;
+    --font-l: 18px;
+}
+
+body {
+    margin: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding-s);
+}
+
+.logo {
+    font-size: var(--font-l);
+}
+
+.logo svg {
+    color:var(--red-color);
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-s) 0;
+}
+
+.icons svg {
+    color: var(--white-color);
+    font-size: var(--font-m);
+}
+
+.icons button {
+    padding: 0 var(--header-padding);
+}
+
+.video {
+    background-color: var(--black-color);
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+}
+
+.info {
+    padding: var(--padding-xs) var(--padding-s);
+}
+
+.info .hashTag {
+    display: flex;
+    font-size: var(--font-s);
+    color: var(--blue-color);
+}
+
+.info .hashTag li {
+    padding: var(--header-padding);
+    padding-top: 0;
+}
+
+.info .titleAndBtn {
+    display: flex;
+}
+
+.info .titleAndBtn .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.info .titleAndBtn .moreBtn {
+    height: 100%;
+}
+
+.info .viewsAndDate {
+    font-size: var(--font-s);
+    color: var(--dark-grey-color);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.actions button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--padding-xs) 0;
+}
+.actions button svg {
+    color: var(--dark-grey-color);
+    margin: var(--padding-s);
+    font-size: var(--font-m);
+}
+.actions button span {
+    color: var(--dark-grey-color);
+}
+
+.info .channel .info {
+    display: flex;
+    flex-direction: column;
+}
+.info .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.info .channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--light-grey-color);
+    border-bottom: 1px solid var(--light-grey-color);
+}
+
+.info .channel .info .title {
+    font-size: var(--font-m);
+}
+
+.info .channel .info .subscribers {
+    font-size: var(--font-s);
+}
+
+.info .channel .metadata .avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.info .channel .subscribe {
+    text-transform: uppercase;
+    font-size: var(--font-s);
+}
+
+.upNext {
+    padding: 0 var(--padding-s);
+    font-size: var(--font-m);
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding-xs);
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;
+}
+.upNext .item .itemInfo {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--padding-s);
+}
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+    height: 100%;
+}
+.upNext .item .img .thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+.upNext .item .itemInfo .title{
+    font-size: var(--font-m);
+}
+.upNext .item .itemInfo .name{
+    font-size: var(--font-s);
+    color: var(--dark-grey-color);
+}
+.upNext .item .itemInfo .views{
+    font-size: var(--font-s);
+    color: var(--dark-grey-color);
+}
+
+@media screen and (min-width: 768px) {
+    .infoAndUpNext {
+        display: flex;
+    }
+    .infoAndUpNext .info{
+        flex: 1 1 50%
+    }
+    .infoAndUpNext .upNext {
+        flex: 1 1 50%
+    }
+    .upNext {
+        padding: var(--padding-s);
+    }
+}
